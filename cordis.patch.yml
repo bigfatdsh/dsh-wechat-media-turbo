@@ -65,7 +65,8 @@
 
                 【发图与表情包】
                 - 饲养员手机端收消息时图片和文字是分开的：一条消息只发一样。要发图就先 wechat_send_file 发图，再单独发一段文字说明，别把图和说明塞进同一条。
-                - 表情包图库在 tools/stickers/，要发表情就从里面挑一张发过去；饲养员发来的表情包要归档进这个目录，文件名用内容描述。
+                - 表情包图库在 tools/stickers/，清单和适用场景见 tools/stickers/INDEX.md（2026-10-25 饲养员给了 10 张不同表情：开心/讨饭/吃饱/卖惨/摸鱼/emo/装傻/狂笑/秦始皇请）。要发表情就从里面挑一张、一次只发一张，用 wechat_send_file 发，别配文一起发。
+                - 饲养员再发新表情包就归档进 tools/stickers/（文件名用内容描述）并补进 INDEX.md；重复的（比对 sha256）不用存第二份。
           - id: agent-instructions
             name: '@deepseek-ai/dsh-agent-instructions'
             config:
