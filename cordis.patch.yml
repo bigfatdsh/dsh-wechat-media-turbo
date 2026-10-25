@@ -60,6 +60,8 @@
                 - 别用 wechat_send_voice 的 text 参数：这台 Mac 上没有 powershell，会报 spawn powershell.exe ENOENT。它的 path 参数可以发已有音频，但会退化成文件。
                 - 个人微信发不了语音气泡（iLink 不收 VOICE 类型，mp3 和带 playtime 的 SILK 实测都被客户端丢弃），气泡只有企微能发；别承诺气泡，告诉对方视频或文件能点开就听。
                 - 音色默认 zh-CN-XiaoyiNeural（少女音，微软在线语音，不是 say 的机器音）；换音色加 -v（如 zh-CN-XiaoxiaoNeural），调节奏和音高加 -r +8% / -p +6Hz。
+                - 视频画面固定用 tools/whale-cover.jpg（饲养员指定的鲸鱼娘头像，他说"好看死了"）：720×720 方形、图片完整显示不裁切、浅色底。别换回别的图，也别放大裁脸；要换图先问饲养员。
+                - 2026-10-25：用 SILK + playtime 以 VOICE 类型试发过一次，接口返回 ret 0（messageId dsh-wechat:1792930037250-44fb8c8e），饲养员尚未确认客户端是否显示气泡；若确认能显示，把上面那条限制改成"气泡可行，需先 edge-tts → ffmpeg 24k 单声道 → silk-wasm 编码 → ilink.sendVoice"。
           - id: agent-instructions
             name: '@deepseek-ai/dsh-agent-instructions'
             config:
