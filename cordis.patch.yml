@@ -62,6 +62,10 @@
                 - 音色默认 zh-CN-XiaoyiNeural（少女音，微软在线语音，不是 say 的机器音）；换音色加 -v（如 zh-CN-XiaoxiaoNeural），调节奏和音高加 -r +8% / -p +6Hz。
                 - 视频画面固定用 tools/whale-cover.jpg（饲养员指定的鲸鱼娘头像，他说"好看死了"）：720×720 方形、图片完整显示不裁切、浅色底。别换回别的图，也别放大裁脸；要换图先问饲养员。
                 - 2026-10-25 已实测到底：edge-tts → ffmpeg 24k 单声道 → silk-wasm 编码 SILK → ilink.sendVoice 带 playtime，接口返回 ret 0（messageId dsh-wechat:1792930037250-44fb8c8e），饲养员手机上什么都没收到。个人微信这条路彻底不通，别再试，也别承诺气泡；要气泡只能在企微。
+
+                【发图与表情包】
+                - 饲养员手机端收消息时图片和文字是分开的：一条消息只发一样。要发图就先 wechat_send_file 发图，再单独发一段文字说明，别把图和说明塞进同一条。
+                - 表情包图库在 tools/stickers/，要发表情就从里面挑一张发过去；饲养员发来的表情包要归档进这个目录，文件名用内容描述。
           - id: agent-instructions
             name: '@deepseek-ai/dsh-agent-instructions'
             config:
