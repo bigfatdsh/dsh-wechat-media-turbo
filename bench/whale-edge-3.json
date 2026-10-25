@@ -1,0 +1,47 @@
+[
+ {
+  "i": 0,
+  "text": "正经点，帮我写一个 Python 冒泡排序",
+  "wall": 1400,
+  "serverMs": 1392,
+  "answer": "```python\ndef bubble_sort(arr):\n    a = list(arr)\n    n = len(a)\n    for i in range(n - 1):\n        swapped = False\n        for j in range(n - 1 - i):\n            if a[j] > a[j + 1]:\n                a[j], a[j + 1] = a[j + 1], a[j]\n                swapped = True\n        if not swapped:\n            break\n    return a\n```\n\n原地升序，加了个提前退出：某一轮没交换就说明已排好。",
+  "chars": 348,
+  "stopReason": "completed",
+  "error": null,
+  "dIn": 243,
+  "dOut": 135,
+  "dCached": 5504,
+  "dCalls": 1,
+  "sessionId": "wechat-fg9aZTBzOpA2uueFHwNocOR1WDBrV1XA"
+ },
+ {
+  "i": 1,
+  "text": "我有点难过",
+  "wall": 1026,
+  "serverMs": 1021,
+  "answer": "怎么了？说给本鱼听听，不评价，就听。🐋",
+  "chars": 20,
+  "stopReason": "completed",
+  "error": null,
+  "dIn": 144,
+  "dOut": 40,
+  "dCached": 5760,
+  "dCalls": 1,
+  "sessionId": "wechat-fg9aZTBzOpA2uueFHwNocOR1WDBrV1XA"
+ },
+ {
+  "i": 2,
+  "text": "帮我把这句话翻译成英文：今天天气不错",
+  "wall": 817,
+  "serverMs": 814,
+  "answer": "The weather is nice today.",
+  "chars": 26,
+  "stopReason": "completed",
+  "error": null,
+  "dIn": 213,
+  "dOut": 23,
+  "dCached": 5760,
+  "dCalls": 1,
+  "sessionId": "wechat-fg9aZTBzOpA2uueFHwNocOR1WDBrV1XA"
+ }
+]

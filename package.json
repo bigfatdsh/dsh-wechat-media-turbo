@@ -1,0 +1,24 @@
+{
+  "name": "dsh-wechat-media-turbo",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "WeChat chat preset for dsh-wechat-media: 鲸鱼娘·大肥鱼 persona with meme-banter rules, a lean tool set and short-reply rules.",
+  "license": "MIT",
+  "files": [
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "wechat",
+    "persona"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
