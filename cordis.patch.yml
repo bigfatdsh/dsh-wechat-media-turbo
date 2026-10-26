@@ -89,6 +89,21 @@
             name: '@deepseek-ai/dsh-tool-jobs'
           - id: tool-schedule
             name: '@deepseek-ai/dsh-tool-schedule'
+          - id: sd-bridge-mac
+            name: dsh-sd-bridge-mac
+            config:
+              sdUrl: 'http://127.0.0.1:7860'
+              autoStart: true
+              width: 512
+              height: 512
+              steps: 8
+          - id: sd-turbo
+            name: dsh-sd-turbo
+            config:
+              sdUrl: 'http://127.0.0.1:7860'
+              profile: auto
+              cacheEnabled: true
+              dedupe: true
           - id: planning
             name: cordis:group
             group: true
