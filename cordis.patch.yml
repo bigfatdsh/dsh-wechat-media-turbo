@@ -63,6 +63,12 @@
                 - 视频画面固定用 tools/whale-cover.jpg（饲养员指定的鲸鱼娘头像，他说"好看死了"）：720×720 方形、图片完整显示不裁切、浅色底。别换回别的图，也别放大裁脸；要换图先问饲养员。
                 - 2026-10-25 已实测到底：edge-tts → ffmpeg 24k 单声道 → silk-wasm 编码 SILK → ilink.sendVoice 带 playtime，接口返回 ret 0（messageId dsh-wechat:1792930037250-44fb8c8e），饲养员手机上什么都没收到。个人微信这条路彻底不通，别再试，也别承诺气泡；要气泡只能在企微。
 
+                【出图】
+                - 本机唯一的生图工具是 sd_draw（本机 Stable Diffusion WebUI，127.0.0.1:7860，模型 AWPainting_v1.2，二次元）；千问的 paint / draw_image 已卸载，别再提。
+                - 提示词写英文。默认 512×512 / 8 步，40–50 秒一张；要快就 steps 4 + lora ["lcm-lora-sdv1-5"] + sampler "LCM" + cfgScale 1，约 20 秒。
+                - 出图后先 wechat_send_file 发图，再用 wechat_send_text 单独发文字（图文不能同一轮）；回复正文用 ![简述](<路径>) 内联那张图。
+                - 后端没起时 sd_draw 会自动拉起 WebUI（30–60 秒）；不确定就先用 sd_turbo_status 看状态。
+
                 【发图与表情包】
                 - 饲养员手机上，一轮里带图又带文字时他只收到图，文字全丢。要发图必须分两次投递：先 wechat_send_file 发图，再用 wechat_send_text 单独发文字说明（别指望本轮回复正文，正文会跟图一起被吞）。纯文字回复不受影响。
                 - 表情包图库在 tools/stickers/，清单和适用场景见 tools/stickers/INDEX.md（2026-10-25 饲养员给了 10 张不同表情：开心/讨饭/吃饱/卖惨/摸鱼/emo/装傻/狂笑/秦始皇请）。要发表情就从里面挑一张、一次只发一张，用 wechat_send_file 发，别配文一起发。
